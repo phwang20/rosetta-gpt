@@ -75,7 +75,7 @@ ChatGPT:
  - Better data integrations with various languages. Would be cool to see applied on greater variety of languages, but I don't really have the knowledge of where to find such data. Some ideas of languages to try out: Sanskrit, Old Church Slavonic, Biblical Hebrew
 
 ## Few Notes
- - OpenAI GPT-3.5 Turbo is good enough. davinci gives the best results. Most open source models I tried (like ones on GPT4ALL) were basically incapable of doing this task and would just make up completely incorrect stuff. 
+ - OpenAI GPT-3.5 Turbo is good enough. **davinci** gives the best results. Most open source models I tried (like ones on GPT4ALL) were basically incapable of doing this task and would just make up completely incorrect stuff.
  - Each line in the txt file is going to be an API call to OpenAI, so I would recommend making sure the number of tokens within each line is within the token limit for a call. Furthermore, I would recommend *not* making these lines too short as having more sentences per call provides more context to the model and therefore better translations.
  - Each line in the txt file is going to be an API call to OpenAI, so I would recommend making sure the number of tokens within each line is within the token limit for a call. Furthermore, I would recommend *not* making these lines too short as having more sentences per call provides more context to the model and therefore better translations.
  - Depending on the language, you might want to adjust the TeX settings like font, dimensions, and title.
