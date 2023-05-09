@@ -1,0 +1,29 @@
+\documentclass[12pt]{book}
+\usepackage[paperwidth=17in, paperheight=9in]{geometry}
+\usepackage[osf,p]{libertinus}
+\usepackage{microtype}
+\usepackage[pdfusetitle,hidelinks]{hyperref}
+\usepackage[series={},nocritical,noend,nofamiliar,noledgroup]{reledmac}
+\usepackage{reledpar}
+\setmainfont{Baskerville}
+
+\usepackage{graphicx}
+\usepackage{polyglossia}
+\setmainlanguage{[TOK:MAIN]}
+\setotherlanguage{[TOK:TRAN]}
+\usepackage{metalogo}
+
+\linenumincrement*{1}
+\firstlinenum*{1}
+\setlength{\Lcolwidth}{0.48\textwidth}
+\setlength{\Rcolwidth}{0.48\textwidth} 
+\usepackage{xeCJK}
+\setCJKmainfont{Songti TC}
+
+\begin{document}
+
+\title{[TOK:TITLE]--[TOK:TRAN] Translation}
+\date{}
+\author{Translated by GPT}
+
+\maketitle
