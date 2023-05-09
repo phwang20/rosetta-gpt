@@ -1,15 +1,20 @@
 # rosetta-gpt
+![alt-text-1](ydz.png "yan-dan-zi") ![alt-text-2](qshsword.png "diffusion-sword-fight")
+
+
   A repository with scripts for translating and typesetting ancient languages using GPT. 
   Included examples:
    - Wenyan (ctext.org)
    - Ancient Greek (www.mikrosapoplous.gr/)
-   - Old English
+   - Old English (https://oldenglishpoetry.camden.rutgers.edu/the-exeter-book/)
 
   Typically, many translations of Wenyan are done meticulously by humans as most machine translation tools online like Google Translate do not translate Wenyan (which is noticeably different from modern Chinese) well. This friction means there are many texts in Wenyan that have not been translated.
 
   However, some on the [internet](https://twitter.com/CandideIII/status/1637947375393308674?s=20) have documented pretty decent ability of "GPT" models to translate Wenyan. The translations aren't perfect and they probably ultimately need a human to edit them, but they're pretty good. I imagine a workflow using GPT models can be used to significantly speed up the amount of time it takes to translate these texts.
 
-  For example, I typeset and translated 燕丹子 (Yandanzi, I'm sure a translation exists but not on ctext)--a story of the attempted asssassination of the king of Qin (later the first emperor of Qin)--using less than $0.01 and in a matter of minutes.
+  For example, I typeset and translated 燕丹子 (Yandanzi, I'm sure a translation exists but not on ctext)--a story of the attempted assassination of the king of Qin (later the first emperor of Qin)--using less than $0.01 and in a matter of minutes.
+
+
  
 ## Basic Workflow
  1. Go find text.
@@ -22,17 +27,18 @@ python script.py \
  --translations_file texts/7thletter/translation.json \
  --title '7th Letter-Plato' \
   --tex_output_file texts/7thletter/generate.tex \
-  --api_key [API_KEY] \
+  --api_key [OPENAI_API_KEY] \
   --original_language 'Ancient Greek' \
   --translation_language English
 ```
  4. Run the outputed Tex file using XeLaTeX. You might have to manually change the tex file depending on your computer and your typesetting preferences. 
 
 ## Examples
-Included as pdf are generated examples of Yandanzi (Wenyan), part of Plato's 7th letter (Ancient Greek), and parts of The Exeter Book of Riddles (Old English).
+Included as pdf are generated examples of Yandanzi (Wenyan), part of Plato's 7th letter (Ancient Greek), and parts of The Exeter Book of Riddles (Old English). You can find them as `generate.pdf` in `src/texts` folder.
 
 **Wenyan**
 燕丹子質於秦，秦王遇之無禮，不得意，欲歸。秦王不聽，謬言曰：「令烏白頭，馬生角，乃可。」丹仰天歎，果烏白頭、馬生角。秦王不得已而遣之，為機發之橋，欲陷丹。丹過之，橋為不發。夜到關，關門未開。丹為鷄鳴，眾雞皆鳴，遂得逃歸。深怨於秦，求欲復之。奉養勇士，無所不至。
+
 Google Translate: 
  > ``Yan Danzi was hostage to Qin, and the king of Qin was rude to him, unhappy, and wanted to return. The king of Qin refused to listen, and said absurdly: "It is okay to order the black head and the horse to grow horns." Dan looked up to the sky and sighed, but it turned out that the black head and the horse had horns. The king of Qin had no choice but to send him as a bridge of opportunity, trying to sink Dan. Dan crosses it, and the bridge does not come out. When the night arrives, the door is closed. Dan called the rooster crowing, and all the roosters crowed, so they escaped. He deeply resented Qin and wanted to recover it. Serving the warriors is omnipresent.''
 
@@ -41,6 +47,7 @@ ChatGPT:
 
 **Ancient Greek**
 Τὴν δ ̓ ἐμὴν δόξαν τὸ μὲν περὶ τῶν νέων, ὅπῃ ποτὲ γενήσοιτο, εἶχεν φόβος–αἱ γὰρ ἐπιθυμίαι τῶν τοιούτων ταχεῖαι καὶ πολλάκις ἑαυταῖς ἐναντίαι φερόμεναι–τὸ δὲ Δίωνος ἦθος ἠπιστάμην τῆς ψυχῆς πέρι φύσει τε ἐμβριθὲς ὂν ἡλικίας τε ἤδη μετρίως ἔχον.
+
 Google Translate: 
  > The d ̓ was not the glory of the youth, where it was never common, there was fear - for the desires of such people are swift and many are carried against themselves - but Dion's ethos trusted the soul around the nature of the foulness of old age. moderately
 
@@ -52,6 +59,7 @@ Hwylc is hæleþa þæs horsc ond þæs hygecræftig þæt þæt mæge asecgan, 
 fere geond foldan, folcsalo bærne, ræced reafige? Recas stigað, haswe ofer hrofum. Hlin bið on eorþan, wælcwealm wera, þonne ic wudu hrere, bearwas bledhwate, beamas fylle,
 holme gehrefed, heahum meahtum wrecen on waþe, wide sended; hæbbe me on hrycge þæt ær hadas wreah foldbuendra, flæsc ond gæstas, somod on sunde. Saga hwa mec þecce,
 oþþe hu ic hatte, þe þa hlæst bere.
+
 [Human translation](https://oldenglishpoetry.camden.rutgers.edu/exeter-book-riddles/): 
  > Which of you heroes is so sharp-witted and so mind-crafty, who can speak aloud about who impels me on this mission, when I mount up strong, sometimes ferocious, thundering majestically, at times whipping ahead, speeding across the earth, burning the folk-halls, plundering the houses? Ashen smoke ascends over the roofs. Tumult upon the earth, men’s slaughtering death, when I stir the forest, the eagerly fruiting forest, filled with trees, roofed by water—it may be driven along the way by lofty might, set forth widely—I bear on my back what burdened many sorts of earth-dwellers earlier, their flesh and their spirits swimming together. Say what covers me, or what I am called, who bears these burdens.
 
