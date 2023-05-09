@@ -1,6 +1,5 @@
 # rosetta-gpt
-![alt-text-1](ydz.png "yan-dan-zi") ![alt-text-2](qshsword.png "diffusion-sword-fight")
-
+![alt-text-2](qshsword.png "diffusion-sword-fight")
 
   A repository with scripts for translating and typesetting ancient languages using GPT. 
   Included examples:
@@ -13,8 +12,6 @@
   However, some on the [internet](https://twitter.com/CandideIII/status/1637947375393308674?s=20) have documented pretty decent ability of "GPT" models to translate Wenyan. The translations aren't perfect and they probably ultimately need a human to edit them, but they're pretty good. I imagine a workflow using GPT models can be used to significantly speed up the amount of time it takes to translate these texts.
 
   For example, I typeset and translated 燕丹子 (Yandanzi, I'm sure a translation exists but not on ctext)--a story of the attempted assassination of the king of Qin (later the first emperor of Qin)--using less than $0.01 and in a matter of minutes.
-
-
  
 ## Basic Workflow
  1. Go find text.
@@ -32,6 +29,9 @@ python script.py \
   --translation_language English
 ```
  4. Run the outputed Tex file using XeLaTeX. You might have to manually change the tex file depending on your computer and your typesetting preferences. 
+
+## Typeset Preview
+![alt-text-1](ydz.png "yan-dan-zi") 
 
 ## Examples
 Included as pdf are generated examples of Yandanzi (Wenyan), part of Plato's 7th letter (Ancient Greek), and parts of The Exeter Book of Riddles (Old English). You can find them as `generate.pdf` in `src/texts` folder.
